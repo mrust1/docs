@@ -1,115 +1,90 @@
-# Welcome, Knative
+# Knative documentation
 
-Knative (pronounced kay-nay-tiv) extends Kubernetes to provide a set of middleware 
-components that are essential to build modern, source-centric, and container-based 
-applications that can run anywhere: on premises, in the cloud, or even in a third-party 
-data center. 
+Welcome to the source file repository for our documentation on
+https://knative.dev.
 
-Each of the components under the Knative project attempt to identify common patterns and 
-codify the best practices that are shared by successful real-world Kubernetes-based frameworks and 
-applications. Knative components focus on solving many mundane but difficult tasks such as:
+## Website
 
-* [Deploying a container](./install/getting-started-knative-app.md)
-* [Orchestrating source-to-URL workflows on Kubernetes](./serving/samples/source-to-url-go/)
-* [Routing and managing traffic with blue/green deployment](./serving/samples/blue-green-deployment.md)
-* [Automatic scaling and sizing workloads based on demand](./serving/samples/autoscale-go)
-* [Binding running services to eventing ecosystems](./eventing/samples/event-flow/README.md)
+The Knative documentation website is built with [hugo](https://gohugo.io/) templates in
+[Knative Website Repo](https://github.com/knative/website).
 
-Developers on Knative can use familiar idioms, languages, and frameworks to deploy any workload: 
-functions, applications, or containers.
+### View published documentation
 
-## Components
+View all Knative documentation and walk-through our code samples on the
+[website](https://knative.dev).
 
-The following Knative components are currently available:
+The Knative website includes versioned docs for recent releases, the Knative
+blog, links to all community resources, as well as Knative governance and
+contributor guidelines.
 
-* [Build](https://github.com/knative/build) - Source-to-container build orchestration
-* [Eventing](https://github.com/knative/eventing) - Management and delivery of events
-* [Serving](https://github.com/knative/serving) - Request-driven compute that can scale to zero
+### Run website locally
 
-## Audience
+Refer to this [doc](https://github.com/knative/website/blob/master/DEVELOPMENT.md) in the website repo.
 
-Knative is designed with different personas in mind:
+### Website source files
 
-![Diagram that displays different Audiences for Knative](./images/knative-audience.svg)
+Source files for the documentation on the website are located within the
+[`/docs`](./docs) directory of this repo.
 
-### Developers
+If you want to contribute a fix or add new content to the documentation, you can
+navigate through this repo or use the `Edit this page` on each of the pages of
+the website.
 
-Knative components offer developers Kubernetes-native APIs for deploying
-serverless-style functions, applications, and containers to an auto-scaling
-runtime.
+Before you can contribute, first start by reading the Knative contributor
+guidelines and learning about our community and requirements. In addition to
+reading about how to contribute to the docs, you should take a moment to learn
+about the Knative code of conduct, governance, values, and the various working
+groups and committees.
 
-To join the conversation, head over to the
-[Knative users](https://groups.google.com/d/forum/knative-users) Google group.
+[Knative community and contributor guidelines](https://knative.dev/community/contributing/)
 
-### Operators
+Source files for all Knative community and governance topics are located
+separately in the [knative/community](https://github.com/knative/community/)
+repo.
 
-Knative components are intended to be integrated into more polished
-products that cloud service providers or in-house teams in large
-enterprises can then operate.
+### Documentation versions for Knative releases
 
-Any enterprise or cloud provider can adopt Knative components into
-their own systems and pass the benefits along to their customers.
+Each release of the Knative docs are available in the website (starting with
+0.3) and their source files are all stored in
+[branches of this repo](./doc-releases.md).
 
-### Contributors
+## Contributing
 
-With a clear project scope, lightweight governance model, and clean
-lines of separation between pluggable components, the Knative project
-establishes an efficient contributor workflow.
+We're excited that you're interested in contributing to the Knative documentation! Check out the resources below to get started.
 
-Knative is a diverse, open, and inclusive community. To get involved, see
-[CONTRIBUTING.md](./community/CONTRIBUTING.md)
-and join the [Knative community](./community/README.md).
+## Getting started
 
-Your own path to becoming a Knative contributor can
-[begin anywhere](https://github.com/knative/serving/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3Akind%2Fgood-first-issue).
-[Bug reports](https://github.com/knative/serving/issues/new) and
-friction logs from new developers are especially welcome.
+- [How to contribute](./CONTRIBUTING.md) -- Contains information about how
+  to contribute and outlines the roles for Docs contributors.
 
-## Documentation
+- [Template page](./new-page-template.md) -- A blank documentation page that
+  demonstrates how to format a new page and includes tips on structuring your
+  documentation.
 
-Follow the links in this section to learn more about Knative.
+## Getting help
 
-### Getting started
+- [#docs on the Knative Slack](https://slack.knative.dev) -- The #docs channel
+  is the best place to go if you have questions about making changes to the
+  documentation. We're happy to help!
 
-* [Installing Knative](./install/README.md)
-* [Getting started with app deployment](./install/getting-started-knative-app.md)
-* [Getting started with serving](./serving)
-* [Getting started with builds](./build)
-* [Getting started with eventing](./eventing)
+- [Documentation working group](https://github.com/knative/community/blob/master/working-groups/WORKING-GROUPS.md#documentation) -- Come join
+  us in the working group to meet other docs contributors and ask any questions
+  you might have.
 
-### Configuration and networking
+## Help and support
 
-* [Configuring outbound network access](./serving/outbound-network-access.md)
-* [Using a custom domain](./serving/using-a-custom-domain.md)
-* [Assigning a static IP address for Knative on Google Kubernetes Engine](./serving/gke-assigning-static-ip-address.md)
-* [Configuring HTTPS with a custom certificate](./serving/using-an-ssl-cert.md)
+Your help and feedback is always welcome!
 
-### Samples and demos
+If you find an issue let us know, either by clicking the `Create Issue` on any
+of the website pages, or by directly opening an
+[issue](https://github.com/knative/docs/issues/new/choose) here in the repo.
 
-* [Autoscaling](./serving/samples/autoscale-go/README.md)
-* [Source-to-URL deployment](./serving/samples/source-to-url-go/README.md)
-* [Binding running services to eventing ecosystems](./eventing/samples/event-flow/README.md)
-* [Telemetry](./serving/samples/telemetry-go/README.md)
-* [REST API sample](./serving/samples/rest-api-go/README.md)
-* [All samples for serving](./serving/samples/)
-* [All samples for eventing](./eventing/samples/)
+If you have a question that you can't find an answer to, we would also like to
+hear about that too. In addition to our docs, you can also reach out to the
+community for assistance. For example, ask a documentation specific question on
+the `#docs` channel in [Slack](https://knative.slack.com/).
 
-### Logging and metrics 
-
-* [Installing logging, metrics and traces](./serving/installing-logging-metrics-traces.md)
-* [Accessing logs](./serving/accessing-logs.md)
-* [Accessing metrics](./serving/accessing-metrics.md)
-* [Accessing traces](./serving/accessing-traces.md)
-* [Setting up a logging plugin](./serving/setting-up-a-logging-plugin.md)
-
-### Debugging
-
-* [Debugging application issues](./serving/debugging-application-issues.md)
-* [Debugging performance issues](./serving/debugging-performance-issues.md)
-
----
-
-Except as otherwise noted, the content of this page is licensed under the
-[Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/),
-and code samples are licensed under the
-[Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
+Also see the [Knative community resource page](https://knative.dev/community/)
+for a list of all the available community resources, including links to the
+various community discussion groups for both development as well as
+troubleshooting.

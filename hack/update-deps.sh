@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Copyright 2018 The Knative Authors
 #
@@ -18,12 +18,6 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-source $(dirname $0)/../vendor/github.com/knative/test-infra/scripts/library.sh
+source $(dirname "$0")/../vendor/knative.dev/hack/library.sh
 
-cd ${REPO_ROOT_DIR}
-
-# Ensure we have everything we need under vendor/
-dep ensure
-
-# Keep the only dir in knative/test-infra we're interested in
-find vendor/github.com/knative/test-infra -mindepth 1 -maxdepth 1 ! -name scripts -exec rm -fr {} \;
+go_update_deps "$@"
